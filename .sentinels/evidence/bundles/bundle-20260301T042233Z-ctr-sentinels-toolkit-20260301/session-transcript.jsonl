@@ -1,0 +1,1 @@
+{"status": "unavailable", "detail": "No session transcript source found. Tried: opencode export, session dirs, SESSION_TRANSCRIPT_FILE env.", "timestamp": "2026-03-01T04:22:34.303642+00:00", "strategies_tried": ["opencode_export", "session_dirs", "env_var"]}

@@ -1,0 +1,11 @@
+{
+  "branch": "feat/wp-1674-jarvis-flow",
+  "generated_at": "2026-03-01T04:22:33.154116+00:00",
+  "head_sha": "48d0e7bd4e8b5dc457b3eb02ec7802d4d3e48657",
+  "repo_root": "/Users/jorge.cajiao/GitHub/sentinels-hub/sentinels-toolkit",
+  "status_short": [
+    " M .sentinels/contract.json",
+    "?? .DS_Store",
+    "?? .sentinels/evidence/"
+  ]
+}
