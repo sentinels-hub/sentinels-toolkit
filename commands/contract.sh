@@ -50,14 +50,32 @@ EOF
   local contract
   contract=$(cat "$contract_file")
 
-  # Extract fields
+  # Extract fields — handle both flat (string) and nested (object) formats
   local contract_id status actor work_package created_at updated_at
   contract_id=$(echo "$contract" | jq -r '.contract_id // "unknown"')
   status=$(echo "$contract" | jq -r '.status // "unknown"')
-  actor=$(echo "$contract" | jq -r '.actor // "unknown"')
-  work_package=$(echo "$contract" | jq -r '.work_package // "—"')
-  created_at=$(echo "$contract" | jq -r '.created_at // "—"')
-  updated_at=$(echo "$contract" | jq -r '.updated_at // "—"')
+
+  # actor: can be a string ("JCajiao") or object ({"declared":{"name":"JCajiao",...}})
+  actor=$(echo "$contract" | jq -r '
+    if (.actor | type) == "object" then
+      .actor.declared.name // .actor.name // (.actor | tostring)
+    else
+      .actor // "unknown"
+    end
+  ')
+
+  # work_package: can be a string/number ("1674") or object ({"id":1674,"project":"..."})
+  work_package=$(echo "$contract" | jq -r '
+    if (.work_package | type) == "object" then
+      .work_package.id // (.work_package | tostring)
+    else
+      .work_package // "—"
+    end
+  ')
+
+  # timestamps: can be at root or under .timestamps
+  created_at=$(echo "$contract" | jq -r '.created_at // .timestamps.created_at // "—"')
+  updated_at=$(echo "$contract" | jq -r '.updated_at // .timestamps.updated_at // "—"')
 
   # Status color
   local status_display
@@ -79,9 +97,11 @@ EOF
   print_box_line "${BOLD:-}WP:${RESET:-}       #${work_package}" "$box_width"
   print_box_line "" "$box_width"
 
-  # Timeline
-  print_box_line "${DIM:-}Created:  ${created_at}${RESET:-}" "$box_width"
-  print_box_line "${DIM:-}Updated:  ${updated_at}${RESET:-}" "$box_width"
+  # Timeline (truncate ISO timestamps to readable format)
+  local created_short="${created_at:0:19}"
+  local updated_short="${updated_at:0:19}"
+  print_box_line "${DIM:-}Created:  ${created_short}${RESET:-}" "$box_width"
+  print_box_line "${DIM:-}Updated:  ${updated_short}${RESET:-}" "$box_width"
   print_box_line "" "$box_width"
 
   # Gates
