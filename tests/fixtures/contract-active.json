@@ -1,0 +1,20 @@
+{
+  "contract_id": "CTR-test-project-20260301",
+  "status": "active",
+  "actor": "TestUser",
+  "work_package": "9999",
+  "created_at": "2026-03-01T10:00:00Z",
+  "updated_at": "2026-03-01T12:00:00Z",
+  "gates": {
+    "G0": "passed",
+    "G1": "passed",
+    "G2": "passed",
+    "G3": "pending",
+    "G4": "pending",
+    "G5": "pending",
+    "G6": "pending",
+    "G7": "pending"
+  },
+  "evidence_url": "https://example.com/evidence",
+  "github_pr": "https://github.com/sentinels-hub/test/pull/1"
+}

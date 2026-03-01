@@ -1,0 +1,88 @@
+{
+  "actor": {
+    "declared": {
+      "github": {
+        "email": "jorgecajiao@gmail.com",
+        "login": "JCajiao"
+      },
+      "name": "JCajiao",
+      "openproject": {
+        "email": "jc@sentinelshub.com",
+        "id": "3"
+      }
+    }
+  },
+  "contract_id": "CTR-sentinels-toolkit-20260301",
+  "gates": {
+    "G0": {
+      "checked_at": "2026-03-01T02:48:50.901195+00:00",
+      "note": "Contract initialized before implementation",
+      "status": "passed"
+    },
+    "G1": {
+      "checked_at": "2026-03-01T02:51:18.006368+00:00",
+      "note": "Requirements validated \u2014 3 subcomandos (health, changelog, contract), 6 ACs, deps: jq/gh/curl/git",
+      "status": "passed"
+    },
+    "G2": {
+      "checked_at": "2026-03-01T02:51:21.721719+00:00",
+      "note": "Architecture plan complete \u2014 7 tasks, file tree, technical design per subcommand, test strategy with fixtures",
+      "status": "passed"
+    },
+    "G3": {
+      "status": "pending"
+    },
+    "G4": {
+      "status": "pending"
+    },
+    "G5": {
+      "status": "pending"
+    },
+    "G6": {
+      "status": "pending"
+    },
+    "G7": {
+      "status": "pending"
+    }
+  },
+  "plan": {
+    "acceptance_criteria": [
+      "Contract stays synchronized with OpenProject and GitHub"
+    ],
+    "definition_of_done": [
+      "Evidence URL linked and closure gate completed"
+    ],
+    "summary": "CLI toolkit con subcomandos health, changelog y contract para el ecosistema Sentinels Hub"
+  },
+  "protocol_version": "1.0",
+  "scope": {
+    "in_scope": [
+      "CLI toolkit con subcomandos health, changelog y contract para el ecosistema Sentinels Hub"
+    ],
+    "out_of_scope": [
+      "Out-of-scope work must be declared before execution"
+    ],
+    "repositories": [
+      "sentinels-toolkit"
+    ]
+  },
+  "status": "active",
+  "timestamps": {
+    "created_at": "2026-03-01T02:48:50.901195+00:00",
+    "updated_at": "2026-03-01T02:51:21.721719+00:00"
+  },
+  "traceability": {
+    "github": {
+      "branch": "feat/wp-1674-jarvis-flow",
+      "commits": []
+    },
+    "openproject": {
+      "contract_id_field": "CTR-sentinels-toolkit-20260301",
+      "work_package_url": "https://sentinels.openproject.com/work_packages/1674"
+    }
+  },
+  "work_package": {
+    "id": 1674,
+    "project": "sentinels-toolkit"
+  }
+}

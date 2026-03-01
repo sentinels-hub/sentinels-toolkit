@@ -1,0 +1,21 @@
+{
+  "contract_id": "CTR-completed-project-20260201",
+  "status": "closed",
+  "actor": "SeniorDev",
+  "work_package": "8888",
+  "created_at": "2026-02-01T09:00:00Z",
+  "updated_at": "2026-02-15T18:00:00Z",
+  "gates": {
+    "G0": "passed",
+    "G1": "passed",
+    "G2": "passed",
+    "G3": "passed",
+    "G4": "passed",
+    "G5": "passed",
+    "G6": "passed",
+    "G7": "passed"
+  },
+  "evidence_url": "https://example.com/evidence-final",
+  "github_pr": "https://github.com/sentinels-hub/test/pull/42",
+  "github_commit": "https://github.com/sentinels-hub/test/commit/abc1234"
+}

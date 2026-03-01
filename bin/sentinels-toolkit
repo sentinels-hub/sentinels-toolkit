@@ -1,0 +1,85 @@
+#!/usr/bin/env bash
+# sentinels-toolkit — CLI toolkit for the Sentinels Hub ecosystem
+# Usage: sentinels-toolkit <command> [options]
+set -euo pipefail
+
+VERSION="0.1.0"
+
+# Resolve the real path of this script (follow symlinks)
+SCRIPT_DIR="$(cd "$(dirname "$(readlink -f "$0" 2>/dev/null || realpath "$0" 2>/dev/null || echo "$0")")" && pwd)"
+TOOLKIT_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+
+# Load libraries
+# shellcheck source=../lib/colors.sh
+source "$TOOLKIT_ROOT/lib/colors.sh"
+# shellcheck source=../lib/deps.sh
+source "$TOOLKIT_ROOT/lib/deps.sh"
+# shellcheck source=../lib/table.sh
+source "$TOOLKIT_ROOT/lib/table.sh"
+
+show_help() {
+  cat <<EOF
+${BOLD:-}sentinels-toolkit${RESET:-} v${VERSION}
+CLI toolkit for the Sentinels Hub ecosystem.
+
+${BOLD:-}USAGE${RESET:-}
+  sentinels-toolkit <command> [options]
+
+${BOLD:-}COMMANDS${RESET:-}
+  health        Show health dashboard for all Sentinels Hub repos
+  changelog     Generate a changelog from conventional commits
+  contract      View contract status from .sentinels/contract.json
+
+${BOLD:-}OPTIONS${RESET:-}
+  --help        Show this help message
+  --version     Show version
+
+${BOLD:-}EXAMPLES${RESET:-}
+  sentinels-toolkit health
+  sentinels-toolkit changelog --since v1.0.0 --stdout
+  sentinels-toolkit contract .
+EOF
+}
+
+show_version() {
+  echo "sentinels-toolkit v${VERSION}"
+}
+
+main() {
+  if [[ $# -eq 0 ]]; then
+    show_help
+    exit 1
+  fi
+
+  local command="$1"
+  shift
+
+  case "$command" in
+    health)
+      source "$TOOLKIT_ROOT/commands/health.sh"
+      cmd_health "$@"
+      ;;
+    changelog)
+      source "$TOOLKIT_ROOT/commands/changelog.sh"
+      cmd_changelog "$@"
+      ;;
+    contract)
+      source "$TOOLKIT_ROOT/commands/contract.sh"
+      cmd_contract "$@"
+      ;;
+    --help|-h|help)
+      show_help
+      ;;
+    --version|-v|version)
+      show_version
+      ;;
+    *)
+      echo -e "${RED:-}ERROR:${RESET:-} Unknown command '${command}'" >&2
+      echo "" >&2
+      show_help >&2
+      exit 1
+      ;;
+  esac
+}
+
+main "$@"
