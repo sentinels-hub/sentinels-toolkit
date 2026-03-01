@@ -1,0 +1,68 @@
+{
+  "artifacts": [
+    {
+      "path": "contract.json",
+      "redacted": true,
+      "sha256": "9f7f51aeb65770a551b023cd4f4de3bb7656e468077c73f35c1c70aeb74a923c",
+      "size_bytes": 2941
+    },
+    {
+      "path": "git-metadata.json",
+      "redacted": true,
+      "sha256": "15e7b2b056f7463c297eb2f31d1273fa19ba83c802a18051ddc35fdd40104450",
+      "size_bytes": 342
+    },
+    {
+      "path": "session-transcript.jsonl",
+      "redacted": true,
+      "sha256": "f8f052fa4635431818529400060b2cbfbe0393130a8fa130d4f05c18c2b501c7",
+      "size_bytes": 259
+    },
+    {
+      "path": "github-evidence.json",
+      "redacted": true,
+      "sha256": "3cd74605979866a983510b326f60cbdd52ceb6704d776e88b92a788f0efb07db",
+      "size_bytes": 239
+    },
+    {
+      "path": "bundle-events.jsonl",
+      "redacted": true,
+      "sha256": "8b896d4699e38b16e39fc482708b57d2f21e6ab91461100ca5c769d374981a3d",
+      "size_bytes": 883
+    }
+  ],
+  "bundle_id": "bundle-20260301T042233Z-ctr-sentinels-toolkit-20260301",
+  "bundle_sha256": "5c073823e2a0919d26da920ce8bb49480317cf3c98587722990152de5441c20a",
+  "contract_id": "CTR-sentinels-toolkit-20260301",
+  "format": "json",
+  "generated_at": "2026-03-01T04:22:34.489920+00:00",
+  "previous_bundle_sha256": null,
+  "protocol_version": "1.0",
+  "redaction": {
+    "patterns_applied": [
+      "ghp_",
+      "github_pat_",
+      "sk-",
+      "authorization bearer",
+      "openproject_api_token",
+      "github_token",
+      "api_key",
+      "password"
+    ],
+    "replacements": 0
+  },
+  "sources": {
+    "github": {
+      "detail": "repository slug unavailable",
+      "status": "unavailable"
+    },
+    "opencode": {
+      "detail": "no session transcript source found (stub written)",
+      "status": "unavailable"
+    },
+    "openproject": {
+      "detail": "handled in contract sync",
+      "status": "skipped"
+    }
+  }
+}

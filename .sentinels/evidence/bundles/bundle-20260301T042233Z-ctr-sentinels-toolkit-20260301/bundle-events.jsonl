@@ -1,0 +1,4 @@
+{"event": "artifact_registered", "path": "contract.json", "redacted": true, "sha256": "9f7f51aeb65770a551b023cd4f4de3bb7656e468077c73f35c1c70aeb74a923c", "size_bytes": 2941, "ts": "2026-03-01T04:22:34.436162+00:00"}
+{"event": "artifact_registered", "path": "git-metadata.json", "redacted": true, "sha256": "15e7b2b056f7463c297eb2f31d1273fa19ba83c802a18051ddc35fdd40104450", "size_bytes": 342, "ts": "2026-03-01T04:22:34.436162+00:00"}
+{"event": "artifact_registered", "path": "session-transcript.jsonl", "redacted": true, "sha256": "f8f052fa4635431818529400060b2cbfbe0393130a8fa130d4f05c18c2b501c7", "size_bytes": 259, "ts": "2026-03-01T04:22:34.436162+00:00"}
+{"event": "artifact_registered", "path": "github-evidence.json", "redacted": true, "sha256": "3cd74605979866a983510b326f60cbdd52ceb6704d776e88b92a788f0efb07db", "size_bytes": 239, "ts": "2026-03-01T04:22:34.436162+00:00"}

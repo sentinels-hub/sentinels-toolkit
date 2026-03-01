@@ -1,0 +1,76 @@
+{
+  "checks": [
+    {
+      "declared": "3",
+      "detail": "value match",
+      "field": "id",
+      "observed": "3",
+      "provider": "openproject",
+      "status": "passed"
+    },
+    {
+      "declared": "jc@sentinelshub.com",
+      "detail": "value match",
+      "field": "email",
+      "observed": "jc@sentinelshub.com",
+      "provider": "openproject",
+      "status": "passed"
+    },
+    {
+      "declared": "JCajiao",
+      "detail": "value match",
+      "field": "login",
+      "observed": "JCajiao",
+      "provider": "github",
+      "status": "passed"
+    },
+    {
+      "declared": "jorgecajiao@gmail.com",
+      "detail": "check disabled",
+      "field": "email",
+      "observed": "jorgecajiao@gmail.com",
+      "provider": "github",
+      "status": "skipped"
+    }
+  ],
+  "contract_id": "CTR-sentinels-toolkit-20260301",
+  "declared_actor": {
+    "github": {
+      "email": "jorgecajiao@gmail.com",
+      "login": "JCajiao"
+    },
+    "name": "JCajiao",
+    "openproject": {
+      "email": "jc@sentinelshub.com",
+      "id": "3"
+    }
+  },
+  "dry_run": false,
+  "generated_at": "2026-03-01T04:22:39.587846+00:00",
+  "observed": {
+    "github": {
+      "email": "jorgecajiao@gmail.com",
+      "login": "JCajiao"
+    },
+    "openproject": {
+      "email": "jc@sentinelshub.com",
+      "id": 3
+    }
+  },
+  "providers": {
+    "github": {
+      "detail": "gh api user",
+      "status": "passed"
+    },
+    "openproject": {
+      "detail": "me endpoint resolved",
+      "status": "passed"
+    }
+  },
+  "result": {
+    "failures": 0,
+    "skipped": 0,
+    "status": "passed"
+  },
+  "strict_mode": true
+}

@@ -1,0 +1,105 @@
+{
+  "actor": {
+    "declared": {
+      "github": {
+        "email": "jorgecajiao@gmail.com",
+        "login": "JCajiao"
+      },
+      "name": "JCajiao",
+      "openproject": {
+        "email": "jc@sentinelshub.com",
+        "id": "3"
+      }
+    },
+    "verified": {
+      "github_me": "passed",
+      "mapping_path": "/Users/jorge.cajiao/GitHub/sentinels-hub/sentinels-toolkit/.sentinels/identity/actor-mapping.json",
+      "openproject_me": "passed"
+    }
+  },
+  "contract_id": "CTR-sentinels-toolkit-20260301",
+  "gates": {
+    "G0": {
+      "checked_at": "2026-03-01T02:48:50.901195+00:00",
+      "note": "Contract initialized before implementation",
+      "status": "passed"
+    },
+    "G1": {
+      "checked_at": "2026-03-01T04:22:39.603707+00:00",
+      "note": "Identity verified in OpenProject and GitHub",
+      "status": "passed"
+    },
+    "G2": {
+      "checked_at": "2026-03-01T02:51:21.721719+00:00",
+      "note": "Architecture plan complete \u2014 7 tasks, file tree, technical design per subcommand, test strategy with fixtures",
+      "status": "passed"
+    },
+    "G3": {
+      "checked_at": "2026-03-01T04:14:55.100273+00:00",
+      "note": "Implementation complete \u2014 3 subcommands, 4 libs, 54 tests passing",
+      "status": "passed"
+    },
+    "G4": {
+      "checked_at": "2026-03-01T04:14:55.187729+00:00",
+      "note": "Code review ready \u2014 committed on feat/wp-1674-jarvis-flow",
+      "status": "passed"
+    },
+    "G5": {
+      "checked_at": "2026-03-01T04:21:44.467935+00:00",
+      "note": "QA PASS_WITH_WARNINGS \u2014 55/55 tests pass, structure verified, dispatcher functional, no security issues. 1 medium-severity bug: contract viewer renders actor/WP/timestamps incorrectly with real contract format (fixtures use simplified format). Non-blocking \u2014 fix tracked as follow-up.",
+      "status": "passed"
+    },
+    "G6": {
+      "checked_at": "2026-03-01T04:22:39.603707+00:00",
+      "note": "Evidence URL registered",
+      "status": "passed"
+    },
+    "G7": {
+      "checked_at": "2026-03-01T04:22:39.603707+00:00",
+      "note": "Contract closure completed",
+      "status": "passed"
+    }
+  },
+  "plan": {
+    "acceptance_criteria": [
+      "Contract stays synchronized with OpenProject and GitHub"
+    ],
+    "definition_of_done": [
+      "Evidence URL linked and closure gate completed"
+    ],
+    "summary": "CLI toolkit con subcomandos health, changelog y contract para el ecosistema Sentinels Hub"
+  },
+  "protocol_version": "1.0",
+  "scope": {
+    "in_scope": [
+      "CLI toolkit con subcomandos health, changelog y contract para el ecosistema Sentinels Hub"
+    ],
+    "out_of_scope": [
+      "Out-of-scope work must be declared before execution"
+    ],
+    "repositories": [
+      "sentinels-toolkit"
+    ]
+  },
+  "status": "closed",
+  "timestamps": {
+    "closed_at": "2026-03-01T04:22:39.603707+00:00",
+    "created_at": "2026-03-01T02:48:50.901195+00:00",
+    "updated_at": "2026-03-01T04:22:39.603707+00:00"
+  },
+  "traceability": {
+    "github": {
+      "branch": "feat/wp-1674-jarvis-flow",
+      "commits": []
+    },
+    "openproject": {
+      "contract_id_field": "CTR-sentinels-toolkit-20260301",
+      "evidence_url": "https://github.com/sentinels-hub/sentinels-agents-journal/tree/main/bundles/2026/03/bundle-20260301T042233Z-ctr-sentinels-toolkit-20260301",
+      "work_package_url": "https://sentinels.openproject.com/work_packages/1674"
+    }
+  },
+  "work_package": {
+    "id": 1674,
+    "project": "sentinels-toolkit"
+  }
+}

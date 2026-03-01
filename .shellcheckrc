@@ -1,0 +1,8 @@
+# .shellcheckrc — ShellCheck configuration
+shell=bash
+# Allow sourcing from paths resolved at runtime
+disable=SC1091
+# Allow using variables in printf format strings
+disable=SC2059
+# Allow word splitting in specific cases
+disable=SC2086
